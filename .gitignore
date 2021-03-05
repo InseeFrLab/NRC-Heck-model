@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.utf8.md
+*.knit.md
+.Renviron
+*.pdf
+*.odt
