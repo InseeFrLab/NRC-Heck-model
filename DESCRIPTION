@@ -1,4 +1,5 @@
 Package: NRC-Heck-model
+Type: Compendium
 Title: The program NRC-Heck-model simulates a general population of individuals, whose income is generated at random.
 Version: 1.0
 Authors@R: 
