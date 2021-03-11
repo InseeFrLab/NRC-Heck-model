@@ -16,7 +16,7 @@ Authors@R:
              email = "saisine-departement-methodes-statistiques@insee.fr",
              comment = "https://www.insee.fr/"))
 Description: The program NRC-Heck-model simulates a general population of individuals, whose income is generated at random.
-License:  `use_gpl3_license()` 
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
