@@ -1,6 +1,7 @@
-Package: NRC-Heck-model
 Type: Compendium
-Title: The program NRC-Heck-model simulates a general population of individuals, whose income is generated at random.
+Package: NRC-Heck-model
+Title: The program NRC-Heck-model simulates a general population of
+    individuals, whose income is generated at random.
 Version: 1.0
 Authors@R: 
     c(person(given = "Laura",
@@ -15,7 +16,8 @@ Authors@R:
              role = "cph",
              email = "saisine-departement-methodes-statistiques@insee.fr",
              comment = "https://www.insee.fr/"))
-Description: The program NRC-Heck-model simulates a general population of individuals, whose income is generated at random.
+Description: The program NRC-Heck-model simulates a general population of
+    individuals, whose income is generated at random.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
