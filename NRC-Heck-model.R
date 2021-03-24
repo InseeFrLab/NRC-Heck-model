@@ -11,12 +11,10 @@
 
 
 install.packages("sampleSelection")
-install.packages("kdensity")
 install.packages("latex2exp")
 install.packages("lubridate")
 
 library(sampleSelection)
-library(kdensity)
 library(latex2exp)
 library(lubridate)
 
@@ -76,7 +74,7 @@ hist(rev_men,main = "", xlab=TeX("$y_i$"),ylab="density")
 
 
 #==========================================================================
-#2. DGP pour Auto-sélection endogène    --------------------------------
+#2. DGP for endogenous selection    --------------------------------
 #==========================================================================
 
 
@@ -107,7 +105,7 @@ sel <- autoselection(rev_men,taille_pop_men,nprobrenforce,-0.4,30,0.2,0.2)
 selectionne <- sel$selectionne #binary variable of participation
 probMen <- sel$pi #response probability
 revenus_selectionnes <- rev_men[selectionne]
-sprintf("Number of self-selected households = %1.0f (/ %1.0f)",sum(probMen),length(probMen))
+sprintf("Number of self-selected households in mean = %1.0f (/ %1.0f)",sum(probMen),length(probMen))
 sprintf("Number of self-selected households = %1.0f (/ %1.0f)",length(revenus_selectionnes),length(probMen))
 sprintf("Average income of self-selected households = %1.5f +/- %1.5f (1 ecty)",mean(revenus_selectionnes),
 	(var(revenus_selectionnes)/length(revenus_selectionnes))^0.5)
@@ -122,8 +120,8 @@ sprintf("Hajek estimator with true probabilities of inclusion = %1.5f +/- %1.5f 
 
 
 #Figure 4 of the article
-kdepi <- kdensity(sel$pi[1:3000],  kernel = "gaussian")
-kdesszz <- kdensity(sel$pi[3001:10000],  kernel = "gaussian")
+kdepi <- density(sel$pi[1:3000],  kernel = "gaussian")
+kdesszz <- density(sel$pi[3001:10000],  kernel = "gaussian")
 
 plot(kdepi, main = "",type="l",lwd=3, col=1,xlim=c(0,1.1),ylim=c(0,4),xlab=TeX("$\\pi_i$"),ylab="density")
 lines(kdesszz,col=2,lwd=3)
